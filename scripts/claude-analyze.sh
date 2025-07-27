@@ -48,7 +48,7 @@ if [ "$non_interactive" = "1" ]; then
 
 	echo ""
 	echo "=================================="
-	echo "Press 'q' to close floax or any other key to keep it open..."
+	echo "Press any key to return to tmux Floax"
 	read -n 1
 else
 	# Use interactive mode for follow-up questions
@@ -60,4 +60,3 @@ fi
 
 # Clean up temp file
 rm -f "$error_file"
-
