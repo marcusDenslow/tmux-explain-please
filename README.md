@@ -28,7 +28,7 @@ A tmux plugin that automatically detects errors in your terminal output and expl
 
 1. Add to your `~/.tmux.conf`:
 ```bash
-set -g @plugin 'yourusername/tmux-explain-please'
+set -g @plugin 'marcusDenslow/tmux-explain-please'
 ```
 
 2. Install with TPM:
