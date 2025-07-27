@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Get the directory of this script
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PLUGIN_DIR="$(dirname "$CURRENT_DIR")"
+
 # Get the last command output from tmux history
 get_last_command_output() {
     # Capture the last screen of output from current pane
@@ -21,7 +25,7 @@ main() {
         if tmux list-commands | grep -q "run-shell.*floax" || [ -f "$HOME/.tmux/plugins/tmux-floax/scripts/floax.sh" ]; then
             # Use floax for floating window display
             cat > /tmp/claude_error_cmd.txt << EOF
-bash $HOME/.tmux/plugins/tmux-error-explain/scripts/claude-analyze.sh $temp_file
+bash $PLUGIN_DIR/scripts/claude-analyze.sh $temp_file
 EOF
             
             # Open floax first
@@ -38,7 +42,7 @@ EOF
             rm /tmp/claude_error_cmd.txt
         else
             # Fallback: create a new tmux window for error analysis
-            tmux new-window -n "Error-Explain" "bash $HOME/.tmux/plugins/tmux-error-explain/scripts/claude-analyze.sh $temp_file"
+            tmux new-window -n "Error-Explain" "bash $PLUGIN_DIR/scripts/claude-analyze.sh $temp_file"
         fi
     else
         tmux display-message "No error detected in last output"

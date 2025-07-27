@@ -9,7 +9,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}tmux-error-explain Installation${NC}"
+echo -e "${BLUE}tmux-explain-please Installation${NC}"
 echo "=================================="
 echo
 
@@ -41,20 +41,20 @@ if [ -d "$HOME/.tmux/plugins/tpm" ]; then
     echo -e "${GREEN}✓${NC} TPM found"
     
     # Check if already in tmux.conf
-    if grep -q "tmux-error-explain" "$HOME/.tmux.conf" 2>/dev/null; then
+    if grep -q "tmux-explain-please" "$HOME/.tmux.conf" 2>/dev/null; then
         echo -e "${GREEN}✓${NC} Plugin already configured in tmux.conf"
     else
         echo -e "${YELLOW}Adding plugin to tmux.conf...${NC}"
         echo "" >> "$HOME/.tmux.conf"
         echo "# Error explanation plugin" >> "$HOME/.tmux.conf"
-        echo "set -g @plugin 'yourusername/tmux-error-explain'" >> "$HOME/.tmux.conf"
+        echo "set -g @plugin 'yourusername/tmux-explain-please'" >> "$HOME/.tmux.conf"
         echo -e "${GREEN}✓${NC} Added to tmux.conf"
         echo -e "${BLUE}Note:${NC} Replace 'yourusername' with your actual GitHub username"
     fi
 else
     echo -e "${YELLOW}TPM not found. Manual installation:${NC}"
     echo "1. Add this to your ~/.tmux.conf:"
-    echo "   run-shell ~/.tmux/plugins/tmux-error-explain/error-explain.tmux"
+    echo "   run-shell ~/.tmux/plugins/tmux-explain-please/error-explain.tmux"
     echo "2. Reload tmux: tmux source-file ~/.tmux.conf"
 fi
 

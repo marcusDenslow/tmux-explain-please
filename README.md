@@ -1,8 +1,8 @@
-# tmux-error-explain
+# tmux-explain-please
 
 A tmux plugin that automatically detects errors in your terminal output and explains them using AI assistance.
 
-![Demo](https://via.placeholder.com/600x300/1a1a1a/ffffff?text=tmux-error-explain+demo)
+![Demo](https://via.placeholder.com/600x300/1a1a1a/ffffff?text=tmux-explain-please+demo)
 
 ## Features
 
@@ -28,7 +28,7 @@ A tmux plugin that automatically detects errors in your terminal output and expl
 
 1. Add to your `~/.tmux.conf`:
 ```bash
-set -g @plugin 'yourusername/tmux-error-explain'
+set -g @plugin 'yourusername/tmux-explain-please'
 ```
 
 2. Install with TPM:
@@ -39,12 +39,12 @@ set -g @plugin 'yourusername/tmux-error-explain'
 ### Manual Installation
 
 ```bash
-git clone https://github.com/yourusername/tmux-error-explain ~/.tmux/plugins/tmux-error-explain
+git clone https://github.com/yourusername/tmux-explain-please ~/.tmux/plugins/tmux-explain-please
 ```
 
 Add to your `~/.tmux.conf`:
 ```bash
-run-shell ~/.tmux/plugins/tmux-error-explain/error-explain.tmux
+run-shell ~/.tmux/plugins/tmux-explain-please/error-explain.tmux
 ```
 
 Reload tmux config:
@@ -193,8 +193,8 @@ MIT License - see LICENSE file for details.
 
 ## Support
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/tmux-error-explain/issues)
-- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/yourusername/tmux-error-explain/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/tmux-explain-please/issues)
+- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/yourusername/tmux-explain-please/discussions)
 - 📖 **Claude Code Help**: [Claude Code Documentation](https://claude.ai/code)
 
 ---
