@@ -7,6 +7,20 @@ if [ ! -f "$error_file" ]; then
 	exit 1
 fi
 
+# Check if Claude CLI is available
+if ! command -v claude &> /dev/null; then
+    echo "Error: Claude CLI not found!"
+    echo ""
+    echo "Please install Claude Code CLI from: https://claude.ai/code"
+    echo "Or install via pip: pip install claude-cli"
+    echo ""
+    echo "Make sure you have an active Claude subscription."
+    echo ""
+    echo "Press any key to continue..."
+    read -n 1
+    exit 1
+fi
+
 # Read the error content
 error_content=$(cat "$error_file")
 
